@@ -1,0 +1,17 @@
+.navbar {
+    background-color: #8a2be2;
+    color: white
+}
+
+button {
+    background-color: white;
+    border-radius: 50%;
+}
+
+button:hover {
+    background-color: #e2b72b;
+}
+
+.close:hover {
+    background-color: #ff0000;
+}

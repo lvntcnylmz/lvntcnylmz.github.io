@@ -5,6 +5,16 @@
     color: #84e22b;
 }
 
+i {
+    font-size: 50px;
+}
+
+button {
+    width: 200px;
+    font-family: 'pix Chicago';
+    font-size: 20px;
+}
+
 p {
     white-space: nowrap;
     overflow: hidden;

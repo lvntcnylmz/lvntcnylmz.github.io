@@ -1,34 +1,34 @@
 <nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
-    <div class="title d-flex">
-      <i class="bi bi-terminal pe-2"></i>Terminal
-    </div>
-    <div class="options d-flex">user : guest</div>
-    <div class="button d-flex">
-      <div class="row">
-        <div class="col p-1">
-          <button type="button" class="btn btn-sm">
-            <i class="bi bi-dash"></i>
+    <ul class="navbar-nav">
+      <li class="nav-item me-auto m-auto"><i class="bi bi-terminal mx-2"></i>Terminal</li>
+    </ul>
+    <ul class="navbar-nav">
+      <li class="nav-item me-auto m-auto">user : guest</li>
+    </ul>
+    <ul class="navbar-nav">
+      <li class="nav-item me-auto m-auto">
+        <button type="button" class="btn btn-sm">
+          <i class="bi bi-dash"></i>
+        </button>
+      </li>
+      <li class="nav-item me-auto m-auto">
+        <ng-template [ngIf]="!isFullscreen">
+          <button type="button" class="btn btn-sm" (click)="openFullscreen()">
+            <i class="bi bi-arrows-angle-expand"></i>
           </button>
-        </div>
-        <div class="col p-1">
-          <ng-template [ngIf]="!isFullscreen">
-            <button type="button" class="btn btn-sm" (click)="openFullscreen()">
-              <i class="bi bi-arrows-angle-expand"></i>
-            </button>
-          </ng-template>
-          <ng-template [ngIf]="isFullscreen">
-            <button type="button" class="btn btn-sm" (click)="closeFullscreen()">
-              <i class="bi bi-arrows-angle-contract"></i>
-            </button>
-          </ng-template>
-        </div>
-        <div class="col p-1">
-          <button type="button" class="btn btn-sm close" (click)="closeTab()">
-            <i class="bi bi-x-lg"></i>
+        </ng-template>
+        <ng-template [ngIf]="isFullscreen">
+          <button type="button" class="btn btn-sm" (click)="closeFullscreen()">
+            <i class="bi bi-arrows-angle-contract"></i>
           </button>
-        </div>
-      </div>
-    </div>
+        </ng-template>
+      </li>
+      <li class="nav-item me-auto m-auto">
+        <button type="button" class="btn btn-sm close" (click)="closeTab()">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </li>
+    </ul>
   </div>
 </nav>

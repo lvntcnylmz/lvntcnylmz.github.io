@@ -1,42 +1,34 @@
 <nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-      <div class="title d-flex">
-        <i class="bi bi-terminal pe-2"></i>Terminal
-      </div>
-      <div class="options d-flex">user : guest</div>
-      <div class="button d-flex">
-        <div class="row">
-          <div class="col p-1">
-            <button type="button" class="btn btn-primary btn-sm">
-              <a class="nav-link text-dark">
-                <i class="bi bi-dash"></i>
-              </a>
+  <div class="container-fluid">
+    <div class="title d-flex">
+      <i class="bi bi-terminal pe-2"></i>Terminal
+    </div>
+    <div class="options d-flex">user : guest</div>
+    <div class="button d-flex">
+      <div class="row">
+        <div class="col p-1">
+          <button type="button" class="btn btn-sm">
+            <i class="bi bi-dash"></i>
+          </button>
+        </div>
+        <div class="col p-1">
+          <ng-template [ngIf]="!isFullscreen">
+            <button type="button" class="btn btn-sm" (click)="openFullscreen()">
+              <i class="bi bi-arrows-angle-expand"></i>
             </button>
-          </div>
-          <div class="col p-1">
-            <ng-template [ngIf]="!isFullscreen">
-              <button type="button" class="btn btn-primary btn-sm" (click)="openFullscreen()">
-                <a class="nav-link text-dark">
-                  <i class="bi bi-arrows-angle-expand"></i>
-                </a>
-              </button>
-            </ng-template>                        
-            <ng-template [ngIf]="isFullscreen">
-              <button type="button" class="btn btn-primary btn-sm" (click)="closeFullscreen()">
-                <a class="nav-link text-dark">
-                  <i class="bi bi-arrows-angle-contract"></i>
-                </a>
-              </button>
-            </ng-template>
-          </div>
-          <div class="col p-1">
-            <button type="button" class="btn btn-primary btn-sm close" (click)="closeTab()">
-              <a class="nav-link text-dark">
-                <i class="bi bi-x-lg"></i>
-              </a>
+          </ng-template>
+          <ng-template [ngIf]="isFullscreen">
+            <button type="button" class="btn btn-sm" (click)="closeFullscreen()">
+              <i class="bi bi-arrows-angle-contract"></i>
             </button>
-          </div>
+          </ng-template>
+        </div>
+        <div class="col p-1">
+          <button type="button" class="btn btn-sm close" (click)="closeTab()">
+            <i class="bi bi-x-lg"></i>
+          </button>
         </div>
       </div>
     </div>
-  </nav>
+  </div>
+</nav>

@@ -1,0 +1,14 @@
+nav {
+    background-color: blueviolet;
+    color: #84e22b;
+    font-family: 'pix Chicago';
+}
+
+button {
+    color: #84e22b;
+    font-size: 13px;
+}
+
+button:hover {
+    background-color: #e2b72b;
+}

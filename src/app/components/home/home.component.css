@@ -5,28 +5,87 @@
     color: #84e22b;
 }
 
-h2 {
+p {
+    white-space: nowrap;
+    overflow: hidden;
     font-family: 'pix Chicago';
     font-size: 20px;
 }
 
-.cursor {
-    animation-name: cursor;
-    animation-duration: 1120ms;
-    animation-iteration-count: infinite;
+.line1 {
+    animation: animated-line1 2s steps(30, end) 1s 1 normal both;
 }
 
-@keyframes cursor {
+.line2 {
+    animation: animated-line2 2s steps(30, end) 1s 1 normal both;
+    animation-delay: 3s;
+}
+
+.line3 {
+    animation: animated-line3 2s steps(30, end) 1s 1 normal both;
+    animation-delay: 5s;
+}
+
+.line4 {
+    animation: animated-line4 2s steps(30, end) 1s 1 normal both;
+    animation-delay: 7s;
+}
+
+.line5 {
+    animation-name: animated-line5;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-delay: 9s;
+    visibility: hidden;
+}
+
+@keyframes animated-line1 {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 33ch;
+    }
+}
+
+@keyframes animated-line2 {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 23ch;
+    }
+}
+
+@keyframes animated-line3 {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 23ch;
+    }
+}
+
+@keyframes animated-line4 {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 20ch;
+    }
+}
+
+@keyframes animated-line5 {
     from {
         color: #84e22b;
+        visibility: visible;
     }
 
     to {
         color: black;
     }
-}
-
-i {
-    border: solid 1px;
-    font-size: 50px;
 }
